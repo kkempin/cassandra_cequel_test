@@ -1,0 +1,43 @@
+GIT
+  remote: https://github.com/kkempin/cequel.git
+  revision: ad4a626c0950fc076a1e2de7b776561276bcac3b
+  specs:
+    cequel (1.7.0)
+      activemodel (~> 4.0)
+      cassandra-driver (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.2.5.1)
+      activesupport (= 4.2.5.1)
+      builder (~> 3.1)
+    activesupport (4.2.5.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    builder (3.2.2)
+    cassandra-driver (2.1.5)
+      ione (~> 1.2)
+    colorize (0.7.7)
+    i18n (0.7.0)
+    ione (1.2.3)
+    json (1.8.3)
+    lz4-ruby (0.3.3)
+    minitest (5.8.4)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cequel!
+  colorize
+  lz4-ruby
+
+BUNDLED WITH
+   1.11.2
