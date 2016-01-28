@@ -5,6 +5,7 @@ require 'erb'
 require 'yaml'
 require 'cequel'
 require 'colorize'
+require 'faker'
 
 class User
   include Cequel::Record
@@ -39,4 +40,19 @@ end
 puts 'Synchronizing User mode ...'.colorize(:green)
 User.synchronize_schema
 
-puts User.count
+puts 'Removing all users'.colorize(:yellow)
+User.delete_all
+
+1.upto(10_000) do |i|
+  User.create(
+    name:     Faker::Name.first_name,
+    surname:  Faker::Name.last_name,
+    age:      Faker::Number.between(1, 100),
+    images:   {
+      i1: Faker::Internet.url,
+      i2: Faker::Internet.url,
+      i3: Faker::Internet.url
+    },
+    is_admin: [true, false].sample
+  )
+end

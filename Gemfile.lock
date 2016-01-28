@@ -22,6 +22,8 @@ GEM
     cassandra-driver (2.1.5)
       ione (~> 1.2)
     colorize (0.7.7)
+    faker (1.6.1)
+      i18n (~> 0.5)
     i18n (0.7.0)
     ione (1.2.3)
     json (1.8.3)
@@ -37,6 +39,7 @@ PLATFORMS
 DEPENDENCIES
   cequel!
   colorize
+  faker
   lz4-ruby
 
 BUNDLED WITH
